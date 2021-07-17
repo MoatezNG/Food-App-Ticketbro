@@ -2,7 +2,7 @@ import {scale} from 'react-native-size-matters';
 const baseFontSize = {
   xSmall: 10,
   small: 13.33,
-  medium: 16.67,
+  medium: 17,
   large: 24.8,
   xLarge: 34,
 };

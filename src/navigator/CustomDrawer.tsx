@@ -14,7 +14,7 @@ const CustomDrawer: React.FC<
   DrawerContentComponentProps<DrawerContentOptions>
 > = props => {
   return (
-    <DrawerContentScrollView>
+    <DrawerContentScrollView contentContainerStyle={styles.container}>
       <DrawerItemList
         activeTintColor={COLORS.PRIMARY}
         labelStyle={styles.drawerText}
@@ -34,6 +34,10 @@ const CustomDrawer: React.FC<
 export default CustomDrawer;
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: COLORS.BACKGROUND,
+    flex: 1,
+  },
   drawerText: {
     fontSize: FONT_SIZE.xSmall,
     letterSpacing: 1,

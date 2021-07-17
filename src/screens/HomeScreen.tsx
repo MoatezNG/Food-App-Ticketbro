@@ -43,7 +43,10 @@ const styles = StyleSheet.create({
     width: DEFAULT_SPACE * 18.5,
     paddingBottom: DEFAULT_SPACE * 2.8,
   },
-  searchField: {},
+  searchField: {
+    flex: 1,
+    fontSize: FONT_SIZE.medium,
+  },
   searchContainer: {
     flexDirection: 'row',
     alignItems: 'center',
