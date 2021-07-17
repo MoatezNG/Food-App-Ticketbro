@@ -6,7 +6,7 @@ import {
 import {RouteProp} from '@react-navigation/native';
 
 import MaterialIcon from '../components/icons/MaterialIcon';
-import {COLORS, FONT_SIZE} from '../constants/styleVariables';
+import {COLORS, FONT_SIZE} from '../style/styleVariables';
 import HomeScreen from '../screens/HomeScreen';
 import FavoritesScreen from '../screens/FavotitesScreen';
 import ProfileScreen from '../screens/ProfileScreen';

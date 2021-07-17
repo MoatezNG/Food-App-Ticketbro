@@ -3,6 +3,7 @@ const baseFontSize = {
   xSmall: 10,
   small: 13.33,
   medium: 17,
+  xmedium: 22,
   large: 24.8,
   xLarge: 34,
 };
@@ -16,6 +17,7 @@ export const FONT_SIZE = {
   xSmall: scale(baseFontSize.xSmall),
   small: scale(baseFontSize.small),
   medium: scale(baseFontSize.medium),
+  xmedium: scale(baseFontSize.xmedium),
   large: scale(baseFontSize.large),
   xLarge: scale(baseFontSize.xLarge),
 };

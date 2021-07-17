@@ -8,7 +8,7 @@ import {
   DrawerItemList,
 } from '@react-navigation/drawer';
 import MaterialIcon from '../components/icons/MaterialIcon';
-import {COLORS, DEFAULT_SPACE, FONT_SIZE} from '../constants/styleVariables';
+import {COLORS, DEFAULT_SPACE, FONT_SIZE} from '../style/styleVariables';
 
 const CustomDrawer: React.FC<
   DrawerContentComponentProps<DrawerContentOptions>

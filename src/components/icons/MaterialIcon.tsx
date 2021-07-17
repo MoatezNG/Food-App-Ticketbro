@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {IconProps} from 'react-native-vector-icons/Icon';
 import {useTheme} from '@react-navigation/native';
-import {FONT_SIZE} from '../../constants/styleVariables';
+import {FONT_SIZE} from '../../style/styleVariables';
 
 const MaterialIcon: React.FC<IconProps> = ({name, ...iconProps}) => {
   const {

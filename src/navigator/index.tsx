@@ -9,7 +9,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import CustomDrawer from './CustomDrawer';
 import OtherScreen from '../screens/OtherScreen';
 import CustomHeader from './CustomHeader';
-import {COLORS} from '../constants/styleVariables';
+import {COLORS} from '../style/styleVariables';
 
 type AppParamList = {
   AuthStack: undefined;

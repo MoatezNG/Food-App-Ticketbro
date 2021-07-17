@@ -1,6 +1,6 @@
 import React from 'react';
 import {Pressable, StyleProp, StyleSheet, View, ViewStyle} from 'react-native';
-import {DEFAULT_SPACE} from '../constants/styleVariables';
+import {DEFAULT_SPACE} from '../style/styleVariables';
 import MenuIcon from '../svg/MenuIcon';
 import ShopingCart from '../svg/ShopingCart';
 import NavigationService from '../services/NavigationService';

@@ -7,7 +7,9 @@ import {
   ViewStyle,
   TextInput,
 } from 'react-native';
-import {COLORS, DEFAULT_SPACE, FONT_SIZE} from '../constants/styleVariables';
+import {COLORS, DEFAULT_SPACE, FONT_SIZE} from '../style/styleVariables';
+import SustancesHorizontalFlatList from '../containers/SustancesHorizontalFlatList';
+import {data} from '../data/data';
 import SearchIcon from '../svg/SearchIcon';
 
 type HomeScreenProps = {
@@ -16,15 +18,22 @@ type HomeScreenProps = {
 
 const HomeScreen = ({style}: HomeScreenProps) => {
   return (
-    <View style={[styles.container, style]}>
-      <View style={styles.headerContainer}>
-        <Text style={styles.headerText}>Delicious food for you</Text>
+    <>
+      <View style={[styles.container, style]}>
+        <View style={styles.headerContainer}>
+          <Text style={styles.headerText}>Delicious food for you</Text>
+        </View>
+        <View style={styles.searchContainer}>
+          <SearchIcon style={styles.searchIcon} />
+          <TextInput style={styles.searchField} placeholder="Search" />
+        </View>
       </View>
-      <View style={styles.searchContainer}>
-        <SearchIcon style={styles.searchIcon} />
-        <TextInput style={styles.searchField} placeholder="Search" />
-      </View>
-    </View>
+      <SustancesHorizontalFlatList
+        data={data}
+        style={styles.sustanceCardFlatList}
+        contentContainerStyle={styles.sustanceCardContent}
+      />
+    </>
   );
 };
 
@@ -57,5 +66,14 @@ const styles = StyleSheet.create({
   },
   searchIcon: {
     marginRight: DEFAULT_SPACE * 1.6,
+  },
+  sustanceCardContent: {
+    marginTop: DEFAULT_SPACE * 10.751,
+    paddingLeft: DEFAULT_SPACE * 1.1,
+    paddingRight: DEFAULT_SPACE * 4.5,
+    paddingTop: DEFAULT_SPACE * 5,
+  },
+  sustanceCardFlatList: {
+    flexGrow: 0,
   },
 });
