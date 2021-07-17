@@ -23,6 +23,8 @@ const CustomDrawer: React.FC<
       />
       <DrawerItem
         icon={() => <MaterialIcon name="logout" color={COLORS.PRIMARY} />}
+        // TODO remove logs
+        // eslint-disable-next-line no-console
         onPress={console.log}
         label="Logout"
         labelStyle={[styles.drawerText]}
