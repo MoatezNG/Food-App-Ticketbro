@@ -11,6 +11,7 @@ module.exports = {
     'react', // Installed in step 1
     'react-native', // Installed in step 1
   ],
+
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -19,5 +20,16 @@ module.exports = {
   },
   env: {
     'react-native/react-native': true,
+  },
+
+  rules: {
+    '@typescript-eslint/consistent-type-definitions': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars-experimental': 'error',
+    'no-unused-vars': 'off',
+    'no-console': 'warn',
+    'prettier/prettier': 'off', // Turn off normal prettier
+    // Any rules you want to add/turn off come here...
   },
 };
