@@ -1,4 +1,4 @@
-import {scale} from 'react-native-size-matters';
+import {scale} from 'react-native-size-matters/extend';
 const baseFontSize = {
   xSmall: 10,
   small: 13.33,
