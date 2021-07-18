@@ -3,7 +3,7 @@ import {Category, ISustenance} from '../models/ISustenance';
 export const Categorys: Category[] = ['Foods', 'Drinks', 'Snacks', 'Sauces'];
 export const data: ISustenance[] = [
   {
-    name: 'Curried chicken salad',
+    name: 'chicken salad',
     imageURL:
       'http://www.chatelaine.com/wp-content/uploads/2013/05/Curried-chicken-salad.jpg',
     category: 'Foods',
