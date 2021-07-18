@@ -73,7 +73,7 @@ const style = StyleSheet.create({
     flex: 1,
   },
   card: {
-    borderRadius: DEFAULT_SPACE * 5,
+    borderRadius: DEFAULT_SPACE * 3,
     flex: 1,
   },
   name: {
