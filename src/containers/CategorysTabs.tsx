@@ -5,7 +5,7 @@ import Tab from '../components/home/Tab';
 import {Category} from '../models/ISustenance';
 import {COLORS, DEFAULT_SPACE} from '../style/styleVariables';
 export const LINEWIDTH = DEFAULT_SPACE * 8.7;
-export type CategorysHorizontalFlatListProps = {
+export type CategorysTabsProps = {
   data: Category[];
   style?: StyleProp<ViewStyle>;
   contentContainerStyle?: StyleProp<ViewStyle>;
@@ -15,7 +15,7 @@ const CategorysTabs = ({
   data,
   contentContainerStyle,
   onChangeCategory,
-}: CategorysHorizontalFlatListProps) => {
+}: CategorysTabsProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const animatedStyle = useAnimatedStyle(() => {
