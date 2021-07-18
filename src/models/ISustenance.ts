@@ -3,5 +3,5 @@ export interface ISustenance {
   category: Category;
   imageURL: string;
   name: string;
-  price: number;
+  price: string;
 }
