@@ -12,7 +12,7 @@ import {COLORS, DEFAULT_SPACE, FONT_SIZE} from '../../style/styleVariables';
 interface IProps {
   imageURL: string;
   name: string;
-  price: number;
+  price: string;
   index: number;
 }
 const SustanceCard: React.FC<IProps> = ({imageURL, name, price}) => {

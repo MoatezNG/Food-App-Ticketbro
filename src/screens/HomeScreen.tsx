@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback, useState} from 'react';
 import {
   StyleProp,
   StyleSheet,
@@ -9,14 +9,21 @@ import {
 } from 'react-native';
 import {COLORS, DEFAULT_SPACE, FONT_SIZE} from '../style/styleVariables';
 import SustancesHorizontalFlatList from '../containers/SustancesHorizontalFlatList';
-import {data} from '../data/data';
+import {Categorys, data} from '../data/data';
 import SearchIcon from '../svg/SearchIcon';
+import CategorysTabs from '../containers/CategorysTabs';
+import {Category} from '../models/ISustenance';
 
 type HomeScreenProps = {
   style?: StyleProp<ViewStyle>;
 };
-
 const HomeScreen = ({style}: HomeScreenProps) => {
+  const [filtredData, setFiltredData] = useState(
+    data.filter(el => el.category === 'Foods'),
+  );
+  const FilterSustances = useCallback((item: Category) => {
+    setFiltredData(data.filter(el => el.category === item));
+  }, []);
   return (
     <>
       <View style={[styles.container, style]}>
@@ -28,8 +35,14 @@ const HomeScreen = ({style}: HomeScreenProps) => {
           <TextInput style={styles.searchField} placeholder="Search" />
         </View>
       </View>
+      <CategorysTabs
+        onChangeCategory={FilterSustances}
+        contentContainerStyle={styles.categorysContent}
+        style={styles.sustanceCardFlatList}
+        data={Categorys}
+      />
       <SustancesHorizontalFlatList
-        data={data}
+        data={filtredData}
         style={styles.sustanceCardFlatList}
         contentContainerStyle={styles.sustanceCardContent}
       />
@@ -68,10 +81,14 @@ const styles = StyleSheet.create({
     marginRight: DEFAULT_SPACE * 1.6,
   },
   sustanceCardContent: {
-    marginTop: DEFAULT_SPACE * 10.751,
+    marginTop: DEFAULT_SPACE * 2.851,
     paddingLeft: DEFAULT_SPACE * 1.1,
     paddingRight: DEFAULT_SPACE * 4.5,
     paddingTop: DEFAULT_SPACE * 5,
+  },
+  categorysContent: {
+    marginLeft: DEFAULT_SPACE * 6,
+    marginTop: DEFAULT_SPACE * 4.6,
   },
   sustanceCardFlatList: {
     flexGrow: 0,

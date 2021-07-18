@@ -1,5 +1,6 @@
-import {ISustenance} from '../models/ISustenance';
+import {Category, ISustenance} from '../models/ISustenance';
 
+export const Categorys: Category[] = ['Foods', 'Drinks', 'Snacks', 'Sauces'];
 export const data: ISustenance[] = [
   {
     name: 'Curried chicken salad',
